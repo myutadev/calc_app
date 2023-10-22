@@ -1,10 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CalcController;
+
 
 /*
-|--------------------------------------------------------------------------
-| Web Routes
+cdfvghjhhhy````````````````````````````````````9iu                                                    000  hh```  `  Web Routes
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/calc', function () {
+//     return view('main.calc');
+// });
+
+Route::get('/calcs/{num1}/{operation}/{num2}', [CalcController::class, 'result']);
